@@ -1,16 +1,18 @@
 # 🔗 URL Shortener Service
 
-A backend service built using FastAPI that allows users to generate short URLs and seamlessly redirect to original links. Designed with scalability, performance, and clean API architecture in mind.
+A scalable backend service built using FastAPI that allows users to generate short URLs and seamlessly redirect to original links. Designed with clean API architecture, validation, and performance in mind.
 
 ---
 
 ## 🚀 Features
 
 - Generate short URLs from long links
+- Custom short code support
 - Fast redirection to original URLs
+- Expiry-based URL handling
+- Click tracking (analytics)
 - RESTful API design
-- Unique ID generation for each URL
-- Optimized database queries for quick lookup
+- Optimized database queries
 - Modular backend architecture
 
 ---
@@ -18,18 +20,19 @@ A backend service built using FastAPI that allows users to generate short URLs a
 ## 🛠 Tech Stack
 
 - **Backend:** FastAPI (Python)
-- **Database:** SQLite / SQLAlchemy
+- **Database:** SQLite (SQLAlchemy ORM)
 - **Server:** Uvicorn
-- **Other:** Pydantic for validation
+- **Validation:** Pydantic
 
 ---
 
 ## ⚙️ How It Works
 
 1. User sends a long URL via API
-2. System generates a unique short ID
-3. Mapping is stored in the database
+2. System generates a unique short code (or uses custom code)
+3. URL mapping is stored in the database
 4. When short URL is accessed → redirects to original URL
+5. Click count is tracked for analytics
 
 ---
 
@@ -41,5 +44,5 @@ A backend service built using FastAPI that allows users to generate short URLs a
 Request:
 ```json
 {
-  "url": "https://example.com"
+  "long_url": "https://example.com"
 }
