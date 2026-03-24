@@ -7,7 +7,7 @@ A production-ready URL Shortener built using **FastAPI**, featuring custom short
 ## 🌐 Live Demo
 
 👉 https://url-shortener-l3gm.onrender.com/
-👉 Swagger UI: https://url-shortener-13gm.onrender.com/docs
+👉 Swagger UI: https://url-shortener-l3gm.onrender.com/docs
 
 ---
 
