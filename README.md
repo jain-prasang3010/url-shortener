@@ -1,53 +1,101 @@
-# 🔗 URL Shortener Service
+# 🔗 URL Shortener API 🚀
 
-A scalable backend service built using FastAPI that allows users to generate short URLs and seamlessly redirect to original links. Designed with clean API architecture, validation, and performance in mind.
+A production-ready URL Shortener built using **FastAPI**, featuring custom short links, analytics tracking, and expiration support.
+
+---
+
+## 🌐 Live Demo
+
+👉 https://url-shortener-13gm.onrender.com
+👉 Swagger UI: https://url-shortener-13gm.onrender.com/docs
 
 ---
 
 ## 🚀 Features
 
-- Generate short URLs from long links
-- Custom short code support
-- Fast redirection to original URLs
-- Expiry-based URL handling
-- Click tracking (analytics)
-- RESTful API design
-- Optimized database queries
-- Modular backend architecture
+* 🔗 Shorten long URLs instantly
+* ✏️ Custom short codes support
+* 📊 Click analytics tracking
+* ⏳ Optional link expiration
+* ⚡ Fast and lightweight API
+* 🛡️ Input validation using Pydantic
 
 ---
 
-## 🛠 Tech Stack
+## 🛠️ Tech Stack
 
-- **Backend:** FastAPI (Python)
-- **Database:** SQLite (SQLAlchemy ORM)
-- **Server:** Uvicorn
-- **Validation:** Pydantic
+* **FastAPI**
+* **Python**
+* **SQLite**
+* **SQLAlchemy**
+* **Pydantic**
+
+---
+
+## 📂 Project Structure
+
+```
+.
+├── main.py
+├── requirements.txt
+├── swagger.png
+├── response.png
+├── README.md
+```
 
 ---
 
 ## ⚙️ How It Works
 
-1. User sends a long URL via API
-2. System generates a unique short code (or uses custom code)
-3. URL mapping is stored in the database
-4. When short URL is accessed → redirects to original URL
-5. Click count is tracked for analytics
+1. User submits a long URL
+2. System generates a unique short code
+3. Stores mapping in database
+4. Redirects using short URL
+5. Tracks clicks and analytics
 
 ---
 
-## 📊 Sample Output
-
-- Successfully generated and tested 50+ short URLs
-- Verified redirection, expiry handling, and analytics tracking
-
 ## 📌 API Endpoints
 
-### 🔹 Create Short URL
-**POST** `/shorten`
+### 🔹 Shorten URL
 
-Request:
-```json
-{
-  "long_url": "https://example.com"
-}
+POST `/shorten`
+
+### 🔹 Redirect
+
+GET `/{short_code}`
+
+### 🔹 Analytics
+
+GET `/analytics/{short_code}`
+
+---
+
+## 📷 Preview
+
+### Swagger UI
+
+![Swagger](swagger.png)
+
+### API Response
+
+![Response](response.png)
+
+---
+
+## 🚀 Future Improvements
+
+* User authentication system
+* Rate limiting
+* PostgreSQL integration
+* Redis caching
+
+---
+
+## 👨‍💻 Author
+
+**Prasang Jain**
+
+---
+
+## ⭐ Star this repo if you like it!
