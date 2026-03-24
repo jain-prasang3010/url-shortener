@@ -14,14 +14,17 @@ from sqlalchemy.orm import sessionmaker, Session
 
 # ------------------ CONFIG ------------------
 
-DATABASE_URL = "sqlite:///./urls.db"
+DATABASE_URL = "sqlite:///./test.db"
 BASE_URL = os.getenv("BASE_URL", "http://127.0.0.1:8000")
 
 logging.basicConfig(level=logging.INFO)
 
 # ------------------ DATABASE SETUP ------------------
 
-engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False})
+engine = create_engine(
+    DATABASE_URL,
+    connect_args={"check_same_thread": False}
+)
 SessionLocal = sessionmaker(bind=engine, autocommit=False, autoflush=False)
 
 Base = declarative_base()
