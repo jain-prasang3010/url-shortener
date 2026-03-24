@@ -36,6 +36,11 @@ A scalable backend service built using FastAPI that allows users to generate sho
 
 ---
 
+## 📊 Sample Output
+
+- Successfully generated and tested 50+ short URLs
+- Verified redirection, expiry handling, and analytics tracking
+
 ## 📌 API Endpoints
 
 ### 🔹 Create Short URL
