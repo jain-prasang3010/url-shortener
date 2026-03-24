@@ -48,7 +48,10 @@ Base.metadata.create_all(bind=engine)
 app = FastAPI(title="URL Shortener API 🚀")
 
 # ------------------ DB DEPENDENCY ------------------
-
+@app.head("/")
+def head_home():
+    return {}
+    
 def get_db():
     db = SessionLocal()
     try:
